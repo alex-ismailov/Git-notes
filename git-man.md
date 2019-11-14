@@ -1,4 +1,4 @@
-<center>Git notes</center>
+# <center>Git notes</center>
 
 ### <center>ssh access to gihub</center> ###
 
@@ -72,7 +72,7 @@ Now we can push our new commits without using log and pas.
 
 ### <center>Creating a remote repository from the terminal</center> ###
 
-***`curl -u 'user_name:password' https://api.github.com/user/repos -d '{"name":"wp1.loc", "description": "some description"}'`***
+***`curl -u 'user_name:password' https://api.github.com/user/repos -d '{"name":"repository_name", "description": "some description"}'`***
 
 then:
 
@@ -96,6 +96,22 @@ Switch to the desired user:
 
 Run git remote to list the existing remotes and see their names and URLs:
 
-git remote -v
+***`git remote -v`***
 
-git remote set-url git@github.com:alex-ismailov/Git-notes.git
+***`git remote set-url git@github.com:alex-ismailov/Git-notes.git`***
+
+***
+
+### <center>Logs</center> ###
+
+***`git log`***
+
+***`git log --pretty=format:"%h - %an, %ar : %s"`***
+
+***`git log --since=2.weeks`***
+
+***`git log --since="120 minutes ago"`***
+
+Output the last two logs: 
+
+***`git log -p -2`***
