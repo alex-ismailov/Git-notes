@@ -1,5 +1,5 @@
 <center>Git notes</center>
-===
+
 ### <center>ssh access to gihub</center> ###
 
 **`ssh-keygen -t rsa -C "user@mail.com"`**
@@ -45,16 +45,27 @@ Check:
 
 ***
 
-In order not to call ssh-agent and not to add a key every time you start a new session - at the end of the ~ / .bashrc file, add:
-
-# start ssh
-{ eval $(ssh-agent -s) && ssh-add /home/user/.ssh/your_public_key; } &> /dev/null
-
 If everything went well, then we will see: *Hi user-name! You've successfully authenticated, but GitHub does not provide shell access.*
 
 ***
 
-After that we can push our new commits without using log and pas.
+In order not to call ssh-agent and not to add a key every time you start a new session:
+
+**`sudo apt install keychain`**
+
+at the end of the ~ / .bashrc file, add:
+
+**`# auto start ssh-agent`**
+
+**`eval 'keychain --eval --agents ssh id_rsa'`**
+
+** The private key must be called id_rsa otherwise keychain won't see it. I am looking for a solution**
+
+After that the passphrase must be be entered only during the first login after a reboot.
+
+Now we can push our new commits without using log and pas.
+
+***
 
 ***
 
