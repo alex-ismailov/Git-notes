@@ -43,6 +43,13 @@ Check:
 
 **`ssh -T git@github.com`**
 
+***
+
+In order not to call ssh-agent and not to add a key every time you start a new session - at the end of the ~ / .bashrc file, add:
+
+# start ssh
+{ eval $(ssh-agent -s) && ssh-add /home/user/.ssh/your_public_key; } &> /dev/null
+
 If everything went well, then we will see: *Hi user-name! You've successfully authenticated, but GitHub does not provide shell access.*
 
 ***
@@ -79,6 +86,5 @@ Switch to the desired user:
 Run git remote to list the existing remotes and see their names and URLs:
 
 git remote -v
-
 
 git remote set-url git@github.com:alex-ismailov/Git-notes.git
