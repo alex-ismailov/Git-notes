@@ -74,9 +74,17 @@ Now we can push our new commits without using log and pas.
 
 ***`curl -u 'user_name:password' https://api.github.com/user/repos -d '{"name":"repository_name", "description": "some description"}'`***
 
-then:
+after:
+
+if you are going to use ssh protocol:
 
 ***`git remote add origin git@github.com:user_name/repository_name.git`***
+
+or
+
+***`git remote add origin https://github.com/user_name/repository_name.git`***
+
+if you are going to use https protocol.
 
 ***
 
