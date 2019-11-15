@@ -88,6 +88,24 @@ if you are going to use https protocol.
 
 ***
 
+### <center>Change remote URL</center> ###
+
+Run git remote to list the existing remotes and see their names and URLs:
+
+***`git remote -v`***
+
+***`git remote set-url git@github.com:alex-ismailov/Git-notes.git`***
+
+***
+
+### <center>Remote tracking branches</center> ###
+
+To push the current branch and set the remote as upstream, use:
+
+***`git push --set-upstream origin master.`***
+
+***
+
 ### <center>Current user</center> ###
 
 Get current user:
@@ -97,16 +115,6 @@ Get current user:
 Switch to the desired user:
 
 ***`git config user.name "user_name" && git config user.email "user@mail.com"`***
-
-***
-
-### <center>Change remote URL</center> ###
-
-Run git remote to list the existing remotes and see their names and URLs:
-
-***`git remote -v`***
-
-***`git remote set-url git@github.com:alex-ismailov/Git-notes.git`***
 
 ***
 
