@@ -43,8 +43,6 @@ Check:
 
 **`ssh -T git@github.com`**
 
-***
-
 If everything went well, then we will see: *Hi user-name! You've successfully authenticated, but GitHub does not provide shell access.*
 
 ***
@@ -53,13 +51,13 @@ In order not to call ssh-agent and not to add a key every time you start a new s
 
 **`sudo apt install keychain`**
 
-at the end of the ~ / .bashrc file, add:
+at the end of the ~ / .bashrc , add:
 
 **`# auto start ssh-agent`**
 
 **`eval 'keychain --eval --agents ssh id_rsa'`**
 
-** The private key must be called id_rsa otherwise keychain won't see it. I am looking for a solution**
+** The private key must be called id_rsa otherwise keychain won't see it. I am looking for a solution **
 
 After that the passphrase must be be entered only during the first login after a reboot.
 
