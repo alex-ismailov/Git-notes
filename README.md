@@ -57,7 +57,7 @@ at the end of the ~ / .bashrc , add:
 
 **`eval 'keychain --eval --agents ssh id_rsa'`**
 
-** The private key must be called id_rsa otherwise keychain won't see it. I am looking for a solution **
+*The private key must be called id_rsa otherwise keychain won't see it. I am looking for a solution*
 
 After that the passphrase must be be entered only during the first login after a reboot.
 
@@ -67,20 +67,19 @@ Now we can push our new commits without using log and pas.
 
 ***
 
-
 ### <center>Creating a remote repository from the terminal</center> ###
 
-***`curl -u 'user_name:password' https://api.github.com/user/repos -d '{"name":"repository_name", "description": "some description"}'`***
+**`curl -u 'user_name:password' https://api.github.com/user/repos -d '{"name":"repository_name", "description": "some description"}'`**
 
 after:
 
 if you are going to use ssh protocol:
 
-***`git remote add origin git@github.com:user_name/repository_name.git`***
+**`git remote add origin git@github.com:user_name/repository_name.git`**
 
 or
 
-***`git remote add origin https://github.com/user_name/repository_name.git`***
+**`git remote add origin https://github.com/user_name/repository_name.git`**
 
 if you are going to use https protocol.
 
@@ -90,9 +89,9 @@ if you are going to use https protocol.
 
 Run git remote to list the existing remotes and see their names and URLs:
 
-***`git remote -v`***
+**`git remote -v`***
 
-***`git remote set-url git@github.com:user_name/repository_name.git`***
+**`git remote set-url git@github.com:user_name/repository_name.git`**
 
 ***
 
@@ -102,7 +101,7 @@ The tracked branch is directly linked to the branch on the remote repository. Th
 
 To push the current branch and set the remote as upstream, use:
 
-***`git push --set-upstream origin master`***
+**`git push --set-upstream origin master`**
 
 After that you can find inforamtion about upstream branch is in the .git/config, in section  [branch "branch_name"]:
 
@@ -116,33 +115,33 @@ After that you can find inforamtion about upstream branch is in the .git/config,
 
 Get current user:
 
-***`git config user.name && git config user.email`***
+**`git config user.name && git config user.email`**
 
 Switch to the desired user:
 
-***`git config user.name "user_name" && git config user.email "user@mail.com"`***
+**`git config user.name "user_name" && git config user.email "user@mail.com"`**
 
 ***
 
 ### <center>Logs</center> ###
 
-***`git log`***
+**`git log`***
 
-***`git log --oneline --decorate --graph`***
+**`git log --oneline --decorate --graph`**
 
-***`git log --pretty=format:"%h - %an, %ar : %s"`***
+**`git log --pretty=format:"%h - %an, %ar : %s"`**
 
-***`git log --since=2.weeks`***
+**`git log --since=2.weeks`**
 
-***`git log --since="120 minutes ago"`***
+**`git log --since="120 minutes ago"`**
 
 Output the last two logs: 
 
-***`git log -2`***
+**`git log -2`**
 
 or:
 
-***`git log -p -2`***
+**`git log -p -2`**
 
 ***
 
@@ -150,25 +149,25 @@ or:
 
 You have to make merge from that branch into which another branch will be filled.
 
-***`git merge branch_name`***
+**`git merge branch_name`**
 
 ### <center>Conflict resolution by kdiff3</center> ###
 
 For conflict resolution you can use utility kdiff3
 
-***`sudo apt install kdiff3`***
+**`sudo apt install kdiff3`**
 
 Latest git versions haves built-in support kdiff3, therefore there is no need to configure it manually.
 So you only need to run:
 
-***`git config --global merge.tool kdiff3`***
+**`git config --global merge.tool kdiff3`**
 
 After that in \~/.gitconfig you will see new section:
 
 [merge]<br>
-> tool = kdiff3
+	tool = kdiff3
 
 
 Now to resolve conflict manually you need only run:
 
-***`git mergetool`***
+**`git mergetool`**
