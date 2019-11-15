@@ -1,4 +1,4 @@
-# <center>Git notes</center>
+<h1 style="text-align: center">Git notes</h1>
 
 ### <center>ssh access to gihub</center> ###
 
@@ -100,9 +100,17 @@ Run git remote to list the existing remotes and see their names and URLs:
 
 ### <center>Remote tracking branches</center> ###
 
+The tracked branch is directly linked to the branch on the remote repository. This allows you to reduce the sending of changes to the ***`git push`*** command without specifying parameters.
+
 To push the current branch and set the remote as upstream, use:
 
-***`git push --set-upstream origin master.`***
+***`git push --set-upstream origin master`***
+
+After that you can find inforamtion about upstream branch is in the .git/config, in section  [branch "branch_name"]:
+
+[branch "master"] <br/>
+> remote = origin <br/>
+> merge = refs/heads/master
 
 ***
 
@@ -122,6 +130,8 @@ Switch to the desired user:
 
 ***`git log`***
 
+***`git log --oneline --decorate --graph`***
+
 ***`git log --pretty=format:"%h - %an, %ar : %s"`***
 
 ***`git log --since=2.weeks`***
@@ -130,4 +140,37 @@ Switch to the desired user:
 
 Output the last two logs: 
 
+***`git log -2`***
+
+or:
+
 ***`git log -p -2`***
+
+***
+
+### <center>Merge</center> ###
+
+You have to make merge from that branch into which another branch will be filled.
+
+***`git merge branch_name`***
+
+### <center>Conflict resolution by kdiff3</center> ###
+
+For conflict resolution you can use utility kdiff3
+
+***`sudo apt install kdiff3`***
+
+Latest git versions haves built-in support kdiff3, therefore there is no need to configure it manually.
+So you only need to run:
+
+***`git config --global merge.tool kdiff3`***
+
+After that in \~/.gitconfig you will see new section:
+
+[merge]<br>
+> tool = kdiff3
+
+
+Now to resolve conflict manually you need only run:
+
+***`git mergetool`***
