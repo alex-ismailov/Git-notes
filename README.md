@@ -94,7 +94,7 @@ Run git remote to list the existing remotes and see their names and URLs:
 
 ***`git remote -v`***
 
-***`git remote set-url git@github.com:alex-ismailov/Git-notes.git`***
+***`git remote set-url git@github.com:user_name/repository_name.git`***
 
 ***
 
