@@ -89,7 +89,7 @@ if you are going to use https protocol.
 
 Run git remote to list the existing remotes and see their names and URLs:
 
-**`git remote -v`***
+**`git remote -v`**
 
 **`git remote set-url git@github.com:user_name/repository_name.git`**
 
@@ -106,8 +106,8 @@ To push the current branch and set the remote as upstream, use:
 After that you can find inforamtion about upstream branch is in the .git/config, in section  [branch "branch_name"]:
 
 [branch "master"] <br/>
-> remote = origin <br/>
-> merge = refs/heads/master
+	remote = origin <br/>
+	merge = refs/heads/master
 
 ***
 
@@ -171,3 +171,21 @@ After that in \~/.gitconfig you will see new section:
 Now to resolve conflict manually you need only run:
 
 **`git mergetool`**
+
+***
+
+### <center>Rebasing</center> ###
+
+With the rebase command, you can take all the changes that were in the commits on one of the branches, and repeat them on the other.
+
+1. Go to the branch from which we will merge commits:
+
+**`git checkout branch_name`**
+
+2. then transfer the commits to the branch we need
+
+**`git rebase branch_name`**
+
+3. Next, you need to switch to the branch to which we rebased commits and perform fast-forward merge with the --ff-only flag
+
+**`git merge --ff-only branch_name`**
