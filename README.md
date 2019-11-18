@@ -93,6 +93,10 @@ Run git remote to list the existing remotes and see their names and URLs:
 
 **`git remote set-url git@github.com:user_name/repository_name.git`**
 
+Delete remote url settings
+
+**`git remote rm <horthand name for the remote repository, usualy named origin>`**
+
 ***
 
 ### <center>Remote tracking branches</center> ###
@@ -189,3 +193,5 @@ With the rebase command, you can take all the changes that were in the commits o
 3. Next, you need to switch to the branch to which we rebased commits and perform fast-forward merge with the --ff-only flag
 
 **`git merge --ff-only branch_name`**
+
+<h4></h4>
