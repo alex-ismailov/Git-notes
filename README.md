@@ -194,4 +194,12 @@ With the rebase command, you can take all the changes that were in the commits o
 
 **`git merge --ff-only branch_name`**
 
-<h4></h4>
+***
+
+### Return to previous version
+
+** git reset --hard <commit_hash> **
+
+to remove already pushed commits we use
+
+** git push --force origin **
