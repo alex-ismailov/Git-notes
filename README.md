@@ -198,8 +198,8 @@ With the rebase command, you can take all the changes that were in the commits o
 
 ### Return to previous version
 
-** git reset --hard <commit_hash> **
+**` git reset --hard <commit_hash> `**
 
 to remove already pushed commits we use
 
-** git push --force origin **
+**` git push --force origin `**
