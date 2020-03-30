@@ -57,8 +57,6 @@ at the end of the ~ / .bashrc , add:
 
 **`eval 'keychain --eval --agents ssh id_rsa'`**
 
-*The private key must be called id_rsa otherwise keychain won't see it. I am looking for a solution*
-
 After that the passphrase must be be entered only during the first login after a reboot.
 
 Now we can push our new commits without using log and pas.
