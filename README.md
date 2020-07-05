@@ -4,9 +4,9 @@
 
 **`ssh-keygen -t rsa -C "user@mail.com"`**
 
-Enter passphrase to your SSH key(empty for no passphrase, but it is not recommended): < filename >_rsa
+Enter key name: < filename >_rsa (if specify only the file name, the keys will be saved in the working directory).
 
-Then git will ask in which directory to save the keys, if you specify only the file name, the keys will be saved in the working directory.
+Then enter passphrase to your SSH key(empty for no passphrase, but it is not recommended)
 
 After that, two keys will appear in the directory you specify, one public for github, the second private, private key is stored on your computer.
 
