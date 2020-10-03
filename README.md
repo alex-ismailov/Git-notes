@@ -194,9 +194,12 @@ With the rebase command, you can take all the changes that were in the commits o
 
 ***
 
-### Undo the last commit
+### Canceling commits
 
 If you made commit in git, but realized that it is bad enough, then you can do this:
+
+`// makes the opposite changes to the commit being canceled`
+**` git revert commit_hash^ `**
 
 **` git reset --soft HEAD^ `**
 
